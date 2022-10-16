@@ -9,6 +9,10 @@ def hello_world():
     us = url_summary()
     return us.summarizeURL(url,5)
 
+@app.route('/test')
+def test():
+    return "testing..."
+
 @app.route('/post', methods=["POST"])
 def testpost():
      input_json = request.get_json(force=True) 
